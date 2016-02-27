@@ -1,0 +1,10 @@
+var resourceDiv = $('#<%= @resource.class.to_s.underscore %>_<%= @resource.id %>');
+var oldLikesString = $(resourceDiv).find('.total-likes').text();
+var oldLikesNum = parseInt(oldLikesString);
+var newLikes = oldLikesNum += 1;
+$(resourceDiv).find('.total-likes').text(newLikes);
+$('.main-content').effect('highlight');
+$('.main-content').effect('highlight', {color: 'rgb(154, 157, 221)'})
+$('.main-content').effect('highlight', {color: 'rgb(154, 157, 221)'}, 3000)
+$('.main-content').effect('explode');
+$( "#toggle" ).toggle( "explode" );
