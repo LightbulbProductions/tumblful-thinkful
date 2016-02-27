@@ -1,0 +1,24 @@
+<%= form_for(@image_link) do |f| %>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+<% if @errors %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@errors.count, "error") %> prohibited this Article Link from being saved:</h2>
+
+    <ul>
+      <% @errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

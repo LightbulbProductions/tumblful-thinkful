@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :follows
+  has_many :image_links
+  has_many :text_posts
+  has_many :likes
 
   validates :name, :presence => true
   validates :username, :presence => true, :uniqueness => true

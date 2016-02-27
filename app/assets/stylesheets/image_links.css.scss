@@ -1,0 +1,14 @@
+// Place all the styles related to the ImageLinks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.thumbnail {
+  max-width: 50px;
+}
+
+.large-image {
+  max-width: 250px;
+  border: 4px solid white;
+  -mox-box-shadow: 0 0 15px #888;
+  -webkit-box-shadow: 0 0 15px #888;
+  box-shadow: 0 0 15px #888;
+}

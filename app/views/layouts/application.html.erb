@@ -13,6 +13,17 @@
   </a>
   <%= button_to("Sign out", destroy_user_session_path, :method => :delete, :class => "pull-right") if user_signed_in? %>
 </nav>
+<nav>
+  <ul>
+  <li><%= link_to "All ImageLinks", image_links_path %></li>
+  <li><%= link_to "All TextPosts", text_posts_path %></li>
+  </ul>
+</nav>
+<nav>
+  <ul>
+    <li><%= link_to "Home", root_path %></li>
+  </ul>
+</nav>
 <%= notices %>
 <div class='main-content'>
   <%= yield %>
