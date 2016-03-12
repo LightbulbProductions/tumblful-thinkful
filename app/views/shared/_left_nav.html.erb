@@ -1,11 +1,11 @@
-<ul>
-  <li>
+<ul class="list-group">
+  <li class="list-group-item">
     <%= content_tag :strong, current_user.name %>
   </li>
-  <li>
+  <li class="list-group-item">
     <%= content_tag :small, '@'+current_user.username %>
   </li>
-  <li>
+  <li class="list-group-item">
     <table>
       <tbody>
         <tr>
@@ -24,8 +24,5 @@
       </tbody>
     </table>
   </li>
-</ul>
-
-<ul>
-  <%= nav_item("Follow", follows_path) %>
+  <li class="list-group-item"><%= link_to "Follow", follows_path %></li>
 </ul>

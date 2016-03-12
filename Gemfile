@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Declare the ruby version to use: http://bundler.io/v1.3/gemfile.html
-ruby '2.2.1'
+ruby '2.1.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
@@ -51,5 +51,3 @@ group :development, :test do
   # Use Shoulda Matchers for validation and association testing: https://github.com/thoughtbot/shoulda-matchers
   gem 'shoulda-matchers'
 end
-
-gem 'jquery-ui-rails'

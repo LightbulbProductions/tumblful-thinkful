@@ -1,20 +1,22 @@
-
-</div>
 <% @text_posts.each do |text_post| %>
+ <%= div_for text_post do %>
+
+<div class="col-sm-12 col-md-10">
   <h2><%= text_post.title %></h2>
-  <%= text_tag text_post.url %>
-  <p>
-    <%= link_to "Show", text_post_path(textpost) %> |
-  </p>
   <span class='likes pull-left'>
   <%= text_post.likes.count %> likes
-  </span>
-
-  <%= form_for Like.new do |f| %>
+  </span> <br>
+  <%= link_to "New Text Post", controller: "text_posts", action: "new" %>
+  </div>
+<div class="col-sm-12 col-md-2">
+   <%= form_for Like.new, :remote => true do |f| %>
     <%= f.hidden_field :likeable_type, :value => text_post.class %>
     <%= f.hidden_field :likeable_id, :value => text_post.id %>
     <%= f.hidden_field :user_id, :value => current_user.id %>
-    <%= f.submit "Like" %>
+    <%= f.submit "Like", :class=>'btn-primary btn-lg' %>
   <% end %>
+</div>
+ 
 
-  <% end %>
+  <% end %>  
+<% end %>

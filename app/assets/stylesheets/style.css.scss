@@ -1,198 +1,213 @@
-body {
-  background-attachment: scroll;
-  background-clip: border-box;
-  background-color: rgba(0, 0, 0, 0);
-  background-origin: padding-box;
-  background-size: auto;
-  color: rgb(51, 51, 51);
-  direction: ltr;
-  display: block;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 14px;
-  height: 636px;
-  line-height: 18px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
-  overflow-y: scroll;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px;
-  unicode-bidi: embed;
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.mdl-demo .mdl-layout__header-row {
+  padding-left: 40px;
+}
+.mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row h3 {
+  font-size: inherit;
+}
+.mdl-demo .mdl-layout__tab-bar-button {
+  display: none;
+}
+.mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-bar .mdl-button {
+  display: none;
+}
+.mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar,
+.mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container {
+  overflow: visible;
+}
+.mdl-demo .mdl-layout__tab-bar-container {
+  height: 64px;
+}
+.mdl-demo .mdl-layout__tab-bar {
+  padding: 0;
+  padding-left: 16px;
+  box-sizing: border-box;
+  height: 100%;
   width: 100%;
 }
-
-nav {
-  background-image: image-url('twitter_web_sprite_bgs.png');
-  background-repeat: repeat-x;
-  min-height: 40px !important;
+.mdl-demo .mdl-layout__tab-bar .mdl-layout__tab .mdl-layout__tab-custom {
+  height: 64px;
+  line-height: 64px;
 }
-
-.nav-logo-link {
-  height: 12px;
-  padding: 10px 14px 18px;
+.mdl-demo .mdl-layout__tab-bar .mdl-layout__tab.is-active::after .mdl-layout__tab-custom.is-active::after {
+  background-color: white;
+  height: 64px;
+  padding: 0;
+  padding-left: 16px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
 }
-
-.main-content {
-  margin: 5px;
+.mdl-demo main > .mdl-layout__tab-panel {
+  padding: 8px;
+  padding-top: 48px;
 }
-
-a.page-title,
-a.page-title:visited {
-  color: white;
+.mdl-demo .mdl-card {
+  height: auto;
+  display: flex;
+  flex-direction: column;
 }
-
-.nav-sign-out {
-  float: right;
-  margin-top: -10px;
+.mdl-demo .mdl-card > * {
+  height: auto;
 }
-
-.bird-topbar-blue {
-  background-image: image-url('twetter-logo.png');
-  background-position: 0 0;
-  width: 24px;
-  height: 21px;
-  float: left;
-  margin-top: 10px;
+.mdl-demo .mdl-card .mdl-card__supporting-text {
+  margin: 40px;
+  flex-grow: 1;
+  padding: 0;
+  color: inherit;
+  width: calc(100% - 80px);
 }
-
-.container {
-  width: 865px;
-  text-align: center;
+.mdl-demo.mdl-demo .mdl-card__supporting-text h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
-
-.page-container {
-  bottom: 0;
-  left: 0;
-  max-height: 750px;
-  min-height: 545px;
-  position: absolute;
-  right: 0;
-  top: 0;
+.mdl-demo .mdl-card__actions {
+  margin: 0;
+  padding: 4px 40px;
+  color: inherit;
 }
-
-.panel hr {
-  margin-top: 2px;
-  margin-bottom: 0px;
-}
-
-.panel h4 span {
-  color: grey;
-  font-weight: lighter;
-}
-
-.panel form .form-group {
-  margin-bottom: 5px;
-  color: rgb(153, 153, 153);
-  font-size: 12px;
-}
-
-.panel form .form-group.or-links {
-  margin-top: 8px !important;
-  margin-bottom: 20px !important;
-}
-
-.panel form .form-group label {
-  font-weight: normal;
-}
-
-.panel form .form-group:first-child {
-  padding-top: 16px;
-}
-
-.panel form .form-group:last-child {
-  margin-bottom: 32px;
-}
-
-.panel form .form-group.tall:last-child {
-  margin-bottom: 50px;
-}
-
-.panel form .form-group input.left {
-  width: 68%;
-  float: left;
-}
-
-.panel form .form-group .btn.btn-warning {
-  color: black;
-}
-
-.panel form .clearfix {
-  padding: 1px;
-}
-
-.clearfix.top-space {
-  margin: 120px 0 0 0;
-}
-
-.clearfix.top-space.small {
-  margin: 50px 0 0 0;
-}
-
-.pad-10 {
-  padding: 0 10px;
-}
-
-.mar-top-5 {
-  margin-top: 5px;
-}
-
-.mar-top-15 {
-  margin-top: 15px;
-}
-
-.text-middle {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 40px;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.lighter {
-  font-weight: lighter;
-}
-
-.alert-float {
-  position: fixed;
-  top: 0;
-  z-index: 1050;
-  color: white;
-  width: 50%;
-  text-align: center;
-  left: 25%;
-}
-
-.alert-float .alert {
-  z-index: 1050;
-  padding: 10px;
-}
-
-table.stats {
-  width: 258px;
-  margin: 14px -20px 0 -20px;
-}
-
-table.stats h4 {
+.mdl-demo .mdl-card__actions a {
+  color: #00BCD4;
   margin: 0;
 }
-
-table.stats small {
-  font-size: 70%;
+.mdl-demo .mdl-card__actions a:hover,
+.mdl-demo .mdl-card__actions a:active {
+  color: inherit;
+  background-color: transparent;
+}
+.mdl-demo .mdl-card__supporting-text + .mdl-card__actions {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.mdl-demo #add {
+  position: absolute;
+  right: 40px;
+  top: 36px;
+  z-index: 999;
 }
 
-table.stats td:first-child {
-  padding-left: 18px;
+.mdl-demo .mdl-layout__content section:not(:last-of-type) {
+  position: relative;
+  margin-bottom: 48px;
 }
-
-.pull-right {
-  float: right;
+.mdl-demo section.section--center {
+  max-width: 860px;
 }
-
-.pull-left {
-  float: left;
+.mdl-demo #features section.section--center {
+  max-width: 620px;
+}
+.mdl-demo section > header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mdl-demo section > .section__play-btn {
+  min-height: 200px;
+}
+.mdl-demo section > header > .material-icons {
+  font-size: 3rem;
+}
+.mdl-demo section > button {
+  position: absolute;
+  z-index: 99;
+  top: 8px;
+  right: 8px;
+}
+.mdl-demo section .section__circle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+.mdl-demo section .section__text {
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding-top: 8px;
+}
+.mdl-demo section .section__text h5 {
+  font-size: inherit;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+.mdl-demo section .section__text a {
+  text-decoration: none;
+}
+.mdl-demo section .section__circle-container > .section__circle-container__circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  margin: 8px 0;
+}
+.mdl-demo section.section--footer .section__circle--big {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin: 8px 32px;
+}
+.mdl-demo .is-small-screen section.section--footer .section__circle--big {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin: 8px 16px;
+}
+.mdl-demo section.section--footer {
+  padding: 64px 0;
+  margin: 0 -8px -8px -8px;
+}
+.mdl-demo section.section--center .section__text:not(:last-child) {
+  border-bottom: 1px solid rgba(0,0,0,.13);
+}
+.mdl-demo .mdl-card .mdl-card__supporting-text > h3:first-child {
+  margin-bottom: 24px;
+}
+.mdl-demo .mdl-layout__tab-panel:not(#overview) {
+  background-color: white;
+}
+.mdl-demo #features section {
+  margin-bottom: 72px;
+}
+.mdl-demo #features h4, #features h5 {
+  margin-bottom: 16px;
+}
+.mdl-demo .toc {
+  border-left: 4px solid #C1EEF4;
+  margin: 24px;
+  padding: 0;
+  padding-left: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.mdl-demo .toc h4 {
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+.mdl-demo .toc a {
+  color: #4DD0E1;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 28px;
+  display: block;
+}
+.mdl-demo .mdl-menu__container {
+  z-index: 99;
 }
