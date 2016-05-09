@@ -1,13 +1,14 @@
 <% @text_posts.each do |text_post| %>
  <%= div_for text_post do %>
-
-<div class="col-sm-12 col-md-10">
+ <div class="col-sm-12 col-md-10">
   <h2><%= text_post.title %></h2>
+  <h5><%= text_post.url %></h5>
   <span class='likes pull-left'>
   <%= text_post.likes.count %> likes
   </span> <br>
   <%= link_to "New Text Post", controller: "text_posts", action: "new" %>
   </div>
+  
 <div class="col-sm-12 col-md-2">
    <%= form_for Like.new, :remote => true do |f| %>
     <%= f.hidden_field :likeable_type, :value => text_post.class %>
@@ -15,8 +16,8 @@
     <%= f.hidden_field :user_id, :value => current_user.id %>
     <%= f.submit "Like", :class=>'btn-primary btn-lg' %>
   <% end %>
-</div>
+</div
+<br>
  
-
   <% end %>  
 <% end %>

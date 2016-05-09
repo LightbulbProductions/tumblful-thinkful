@@ -2,9 +2,10 @@
 <html>
 <head>
   <title>Tumblful</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag "//fonts.googleapis.com/icon?family=Material+Icons" %>
+  <%= stylesheet_link_tag "//fonts.googleapis.com/css?family=Poiret+One" %>
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <!-- Optional theme -->
@@ -21,7 +22,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Tumblful</a>
+          <a class="navbar-brand" href="/">TLE</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -38,7 +39,6 @@
     <div class="container-fluid">
       <div class="starter-template">
         <p><%= notices %></p>
-        <h4>Following</h4>
         <%= yield %>
       </div>
     </div><!-- /.container -->

@@ -2,3 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poiret One', cursive;
+}
+$lightgrey : #8c7373; 	/* Here's how you assign the values to a variable */
+$midgrey : #8c8c73;
+$cpad: 20px;		/* Variables are not limited to colors, you can use it to store values too*/
+
+
+body {
+	background-image: -webkit-linear-gradient(top, $lightgrey  42%, $midgrey 100%);
+	background-image: -moz-linear-gradient(top, $lightgrey  42%, $midgrey 100%);
+	background-attachment:fixed;
+	
+}

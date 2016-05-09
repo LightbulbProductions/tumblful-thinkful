@@ -12,6 +12,9 @@
 *= require_tree .
 
 */
+h1, h2, h3, h4, h5, h6 {
+   font-family: 'Poiret One', cursive;
+}
 a {
     color: red;
 }
