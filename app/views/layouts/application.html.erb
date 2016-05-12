@@ -25,14 +25,25 @@
           <a class="navbar-brand" href="/">TLE</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
+       
+
           <ul class="nav navbar-nav">
             <li class="<%= 'active' if current_page?(root_path) %>"><a href="/">Home</a></li>
             <% if user_signed_in? %>
+            <% flash.each do |key, value| %>
+            <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+            <% end %>
             <li class="<%= 'active' if params[:controller] == 'image_links' %>"><%= link_to "Images", image_links_path %></li>
             <li class="<%= 'active' if params[:controller] == 'text_posts' %>"><%= link_to "Texts", text_posts_path %></li> 
+             <li class="<%= 'active' if params[:controller] == 'forums' %>"><%= link_to "Forums", forem.forums_path %><li>
+          
           <% end %>
           </ul>
+          
            <%= button_to("Sign out", destroy_user_session_path, :method => :delete, :type=>"button", :class => "btn btn-default btn-sm navbar-btn") if user_signed_in? %>
+           <% if current_user.forem_admin %>
+        | <%= link_to "Administrate", forem.admin_root_url %>
+         <% end %>
         </div><!--/.nav-collapse --> 
       </div>
     </nav>

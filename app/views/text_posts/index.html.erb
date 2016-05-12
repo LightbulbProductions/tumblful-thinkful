@@ -3,6 +3,10 @@
  <div class="col-sm-12 col-md-10">
   <h2><%= text_post.title %></h2>
   <h5><%= text_post.url %></h5>
+  
+  <%= form_tag do %>
+  Form contents
+<% end %>
   <span class='likes pull-left'>
   <%= text_post.likes.count %> likes
   </span> <br>
