@@ -41,7 +41,8 @@ gem 'forem-redcarpet', github: "radar/forem-redcarpet"
 gem 'will_paginate'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
-
+# Youtube search
+gem 'yourub'
 # Use Devise for authentication: https://github.com/plataformatec/devise#getting-started
 gem 'devise'
 
